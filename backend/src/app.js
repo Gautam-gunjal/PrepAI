@@ -6,7 +6,7 @@ const interviewRoutes = require('./routes/interview.routes')
 const cookieParser =  require('cookie-parser');
 
 app.use(cors({
-    origin:'http://localhost:5173',
+    origin:'https://prep-ai-two-eta.vercel.app',
     credentials:true
 }))
 app.use(express.json())
