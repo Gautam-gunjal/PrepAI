@@ -36,7 +36,7 @@ const interviewReportSchema = z.object({
 async function generatePdfFromHtml(htmlContent) {
     const browser = await puppeteer.launch({
         args: chromium.args,
-        executablePath: await chromium.executablePath,
+        executablePath: await chromium.executablePath(),
         headless: chromium.headless,
     })
     const page = await browser.newPage();
