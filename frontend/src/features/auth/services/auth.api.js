@@ -1,32 +1,37 @@
 import axios from "axios"
 
-export async function register({username,email,password}){
+const api = axios.create({
+    baseURL: "https://prepai-xya8.onrender.com",
+    withCredentials: true
+})
 
-        const res = await axios.post("http://localhost:3000/api/auth/register",{username,email,password},{withCredentials:true})
-        return res.data                
+
+export async function register({ username, email, password }) {
+
+    const res = await api.post("/api/auth/register", { username, email, password })
+    return res.data
 }
 
-export async function login({email,password}) {
-            const res = await axios.post('http://localhost:3000/api/auth/login',{email,password},{withCredentials:true})
-            return res.data;    
+export async function login({ email, password }) {
+    const res = await api.post('/api/auth/login', { email, password })
+    return res.data;
 }
 
-export async function logout(){
-    try{
-        const res = await axios.get('http://localhost:3000/api/auth/logout',{withCredentials:true})
+export async function logout() {
+    try {
+        const res = await api.get('/api/auth/logout')
         return res.data
-    }catch(err){
+    } catch (err) {
         console.log(err)
     }
 }
 
-export async function getme(){
-    try{
-        const res = await axios.get('http://localhost:3000/api/auth/get-me',{withCredentials:true})
+export async function getme() {
+    try {
+        const res = await api.get('/api/auth/get-me')
         return res.data
-    }catch(err)
-    {
+    } catch (err) {
         console.log(err);
-        
+
     }
 }
