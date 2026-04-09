@@ -15,7 +15,6 @@
 - [How It Works](#-how-it-works)
 - [Authentication Flow](#-authentication-flow)
 - [Interview Report Schema](#-interview-report-schema)
-- [Future Improvements](#-future-improvements)
 - [License](#-license)
 - [Author](#️-author)
 
