@@ -1,0 +1,71 @@
+/* ===== Navbar ===== */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 75px;
+    background: #161616;
+    border-bottom: 1px solid #2a2a2e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ===== Logo ===== */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: rgba(240, 68, 124, 0.15);
+    border: 1px solid rgba(240, 68, 124, 0.3);
+    border-radius: 9px;
+    color: #f0447c;
+}
+
+.navbar-logo-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f0f0f2;
+    letter-spacing: -0.03em;
+}
+
+.navbar-logo-accent {
+    color: #f0447c;
+}
+
+/* ===== Logout Button ===== */
+.navbar-logout {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid #333338;
+    background: #242428;
+    color: #8e8e96;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.navbar-logout:hover {
+    border-color: rgba(240, 68, 124, 0.4);
+    color: #f0447c;
+    background: rgba(240, 68, 124, 0.08);
+}
+
+.navbar-logout:active {
+    transform: scale(0.97);
+}
