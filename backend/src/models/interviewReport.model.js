@@ -69,7 +69,7 @@ const preparationPlanSchema = new mongoose.Schema({
 const InterviewReportSchema = new mongoose.Schema({
     resume:{
         type:String,
-        required:true
+        default: ""
     },
     selfDescription:{
         type:String
