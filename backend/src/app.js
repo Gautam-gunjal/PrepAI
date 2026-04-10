@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors')
 const authRoutes = require('./routes/auth.routes') 
 const interviewRoutes = require('./routes/interview.routes')
+const healthRoute = require('./routes/health.routes')
 const cookieParser =  require('cookie-parser');
 
 app.use(cors({
@@ -14,5 +15,6 @@ app.use(cookieParser())
 
 app.use("/api/auth",authRoutes)
 app.use('/api/interview',interviewRoutes)
+app.use('/api',healthRoute)
 
 module.exports = app
