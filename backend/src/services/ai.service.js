@@ -105,7 +105,7 @@ Return a JSON object with a single field "html" containing the complete HTML res
 The HTML should be ready to convert to PDF using puppeteer with no modifications needed.`
 
     const response = await ai.models.generateContent({
-        model: "gemini-3.1-flash-lite-preview",
+        model: "gemini-3.1-flash-lite",
         contents: prompt,
         config: {
             responseMimeType: "application/json",
@@ -159,7 +159,7 @@ MATCH SCORE RULES:
   * Below 40: Poor match, multiple major skills missing`
 
     const response = await ai.models.generateContent({
-        model: "gemini-3.1-flash-lite-preview",
+        model: "gemini-3.1-flash-lite",
         contents: prompt,
         config: {
             responseMimeType: "application/json",
